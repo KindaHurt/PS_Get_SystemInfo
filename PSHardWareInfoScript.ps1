@@ -54,3 +54,6 @@ Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uni
 
 # Export addinational installed apps information csv files
 get-appxpackage | Select-Object Name, Version, Publisher, @{Name = "APPUUID" ; Expression = {"DefaultUUID"}} | Where-Object Name -ne -Value $Null | Export-csv -Encoding UTF8 -path .\AppxPackageList.csv -NoTypeInformation ; 
+
+
+# This comment is a test for github.
